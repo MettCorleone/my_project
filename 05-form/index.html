@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="post" id="my_form"
+        onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+        <label for="red_username">Повне ім'я</label>
+        <input type="text" name="username" id="red_username" minlength="2" placeholder="John Bee" required>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="johnbee@domain.com" required>
+        <br>
+        <label for="reg_password">Пароль</label>
+        <input type="password" name="password" id="reg_password" placeholder="Password" minlength="8" maxlength="16"
+            required>
+        <br>
+        <label for="rep_passsword">Пароль ще раз</label>
+        <input type="password" name="password" id="rep_passsword" placeholder="Password again" minlength="8"
+            maxlength="16" required>
+        <br>
+        <span>Стать</span>
+        <label><input type="radio" name="gender" value="male" checked>Чоловіча</label>
+        <label><input type="radio" name="gender" value="female">Жіноча</label>
+        <br>
+        <label for="age">Вік</label>
+        <input type="number" name="age" min="16" max="99" id="age">
+        <br>
+        <span>Курс</span>
+        <select name="course">
+            <option value="courses" disabled selected hidden>Виберіть курс</option>
+            <option value="fron_end">Front-End</option>
+            <option value="beck_end">Back-End</option>
+            <option value="pm">Project Management</option>
+            <option value="qa">QA Manua</option>
+        </select>
+        <br>
+        <label for="adres">Повна адреса</label>
+        <textarea name="adres" id="adres" rows="5" cols="25" placeholder="Країна,регіон,місто/селище,вулиця"></textarea>
+        <br>
+        <input type="checkbox" name="yes" id="yes" required>
+        <label for="yes">Я погоджуюсь з обробкою персональних даних</label>
+        <br>
+        <button type="reset">Очистити форму</button>
+        <button type="submit">Зареєструватися</button>
+    </form>
+</body>
+
+</html>
